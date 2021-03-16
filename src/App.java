@@ -1,7 +1,43 @@
 import java.util.Scanner;
+
+class Adicionar {
+
+    public void AdicEmpregado() {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("                       Adição de empregado");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Digite o nome do empregado que deseja adicionar: ");
+        Scanner funcAddScanner = new Scanner(System.in);
+        String empregadoAdd = funcAddScanner.nextLine();
+        System.out.println("");
+        System.out.println("Funcionário adicionado.");
+        System.out.println("---------------------------------------------------------------");
+    }
+}
+
+class Remover {
+    
+    public void RemoEmpregado() {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("                     Remoção de empregado");
+        System.out.println("---------------------------------------------------------------");
+        System.out.print("Digite o nome do empregado que deseja remover:");
+        Scanner funcRemScanner = new Scanner(System.in);
+        String empregadoRem = funcRemScanner.nextLine();
+        System.out.println("Funcionário removido.");
+    }
+}
+
 public class App {
+
     public static void main(String args[]) {
         boolean fim = false;
+        Adicionar func1 = new Adicionar();
+        Remover func2 = new Remover();
 
         do{
             System.out.println("");
@@ -29,26 +65,10 @@ public class App {
                     fim = true;
                     break;
                 case 1:
-                    System.out.println("");
-                    System.out.println("");
-                    System.out.println("---------------------------------------------------------------");
-                    System.out.println("|                      Adição de empregado                    |");
-                    System.out.println("---------------------------------------------------------------");
-                    System.out.println("Digite o nome do empregado que deseja adicionar: ");
-                    Scanner funcAddScanner = new Scanner(System.in);
-                    String empregadoAdd = funcAddScanner.nextLine();
-                    System.out.println("");
-                    System.out.println("Funcionário adicionado.");
-                    System.out.println("---------------------------------------------------------------");
-                    break;
+                    func1.AdicEmpregado();
+                    break;    
                 case 2:
-                    System.out.println("---------------------------------------------------------------");
-                    System.out.println("                     Remoção de empregado");
-                    System.out.println("---------------------------------------------------------------");
-                    System.out.print("Digite o nome do empregado que deseja remover:");
-                    Scanner funcRemScanner = new Scanner(System.in);
-                    String empregadoRem = funcRemScanner.nextLine();
-                    System.out.println("Funcionário removido.");
+                    func2.RemoEmpregado();
                     break;
                 case 3:
                     System.out.println("---------------------------------------------------------------");
